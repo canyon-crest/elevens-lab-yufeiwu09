@@ -156,7 +156,9 @@ public class ElevensBoard11 extends Board11 {
 		List<Integer> pairs = findPairSum11(cardIndexes());
 		if(pairs.size()>0) {
 			replaceSelectedCards(pairs);
-			System.out.println("Removed pair: " + pairs);
+			if(I_AM_DEBUGGING){
+				System.out.println("Removed pair: " + pairs);
+			}
 			return true;
 		}
 		 return false; // REPLACE !
@@ -173,7 +175,9 @@ public class ElevensBoard11 extends Board11 {
 		List<Integer> trios = findJQK(cardIndexes());
 		if(trios.size()>0) {
 			replaceSelectedCards(trios);
-			System.out.println("Removed trio: " + trios);
+			if(I_AM_DEBUGGING){
+				System.out.println("Removed trio: " + trios);
+			}
 			return true;
 		}
 		
